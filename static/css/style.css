@@ -96,3 +96,36 @@ background:#eab308;
 .delete-btn:hover{
 background:#dc2626;
 }
+
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#94a3b8;
+margin-bottom:30px;
+}
+
+.hero-buttons button{
+margin:10px;
+}
+
+.features{
+display:flex;
+gap:20px;
+margin-top:40px;
+}
+
+.feature-card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+flex:1;
+text-align:center;
+}
