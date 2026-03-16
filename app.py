@@ -112,5 +112,31 @@ def delete_snippet(id):
 
     return redirect("/snippets")
 
-if __name__ == "__main__":
-    app.run(debug=True)
+@app.route("/edit/<int:id>", methods=["GET","POST"])
+def edit_snippet(id):
+
+    conn = sqlite3.connect("database/db.sqlite3")
+    cursor = conn.cursor()
+
+    if request.method == "POST":
+        title = request.form["title"]
+        code = request.form["code"]
+
+        cursor.execute(
+            "UPDATE snippets SET title=?, code=? WHERE id=?",
+            (title, code, id)
+        )
+
+        conn.commit()
+        conn.close()
+
+        return redirect("/snippets")
+
+    cursor.execute("SELECT * FROM snippets WHERE id=?", (id,))
+    snippet = cursor.fetchone()
+    conn.close()
+
+    return render_template("edit_snippet.html", snippet=snippet)
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
