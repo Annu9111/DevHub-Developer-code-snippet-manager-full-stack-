@@ -86,5 +86,18 @@ def create_snippet():
 
     return render_template("create_snippet.html")
 
+@app.route("/snippets")
+def view_snippets():
+
+    conn = sqlite3.connect("database/db.sqlite3")
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM snippets")
+    snippets = cursor.fetchall()
+
+    conn.close()
+
+    return render_template("view_snippet.html", snippets=snippets)
+
 if __name__ == "__main__":
     app.run(debug=True)
