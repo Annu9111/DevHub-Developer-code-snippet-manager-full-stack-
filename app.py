@@ -61,5 +61,30 @@ def dashboard():
         return render_template("dashboard.html", user=session["user"])
     return redirect("/login")
 
+@app.route("/create", methods=["GET","POST"])
+def create_snippet():
+    if "user" not in session:
+        return redirect("/login")
+
+    if request.method == "POST":
+        title = request.form["title"]
+        code = request.form["code"]
+        author = session["user"]
+
+        conn = sqlite3.connect("database/db.sqlite3")
+        cursor = conn.cursor()
+
+        cursor.execute(
+            "INSERT INTO snippets (title,code,author) VALUES (?,?,?)",
+            (title,code,author)
+        )
+
+        conn.commit()
+        conn.close()
+
+        return redirect("/dashboard")
+
+    return render_template("create_snippet.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
