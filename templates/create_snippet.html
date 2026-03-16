@@ -2,6 +2,17 @@
 
 {% block content %}
 
-<h1>Create snippet</h1>
+<h2>Create Code Snippet</h2>
+
+<form method="POST">
+
+<input type="text" name="title" placeholder="Snippet title"><br><br>
+
+<textarea name="code" rows="10" cols="60"
+placeholder="Paste your code here"></textarea><br><br>
+
+<button type="submit">Post Snippet</button>
+
+</form>
 
 {% endblock %}
