@@ -53,3 +53,46 @@ button{
 button:hover{
     background:#0ea5e9;
 }
+
+.actions{
+margin-top:10px;
+}
+
+.like-btn{
+background:#38bdf8;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.edit-btn{
+background:#facc15;
+color:black;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.delete-btn{
+background:#ef4444;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.like-btn:hover{
+background:#0ea5e9;
+}
+
+.edit-btn:hover{
+background:#eab308;
+}
+
+.delete-btn:hover{
+background:#dc2626;
+}
