@@ -154,5 +154,10 @@ def like_snippet(id):
 
     return redirect("/snippets")
 
+@app.route("/logout")
+def logout():
+    session.pop("user", None)
+    return redirect("/login")
+
 # if __name__ == "__main__":
 #     app.run(debug=True)
