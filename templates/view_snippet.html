@@ -2,6 +2,21 @@
 
 {% block content %}
 
-<h1>view_snippet</h1>
+<h2>DevHub Snippets</h2>
+
+{% for snippet in snippets %}
+
+<h3>{{snippet[1]}}</h3>
+<p><b>Author:</b> {{snippet[3]}}</p>
+
+
+<pre style="background:#1e1e1e;color:#00ff9c;padding:15px;border-radius:8px;">
+{{snippet[2]}}
+</pre>
+<a href="/delete/{{snippet[0]}}">Delete</a>
+
+<hr>
+
+{% endfor %}
 
 {% endblock %}

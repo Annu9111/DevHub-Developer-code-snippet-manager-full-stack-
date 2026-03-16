@@ -99,5 +99,18 @@ def view_snippets():
 
     return render_template("view_snippet.html", snippets=snippets)
 
+@app.route("/delete/<int:id>")
+def delete_snippet(id):
+
+    conn = sqlite3.connect("database/db.sqlite3")
+    cursor = conn.cursor()
+
+    cursor.execute("DELETE FROM snippets WHERE id=?", (id,))
+
+    conn.commit()
+    conn.close()
+
+    return redirect("/snippets")
+
 if __name__ == "__main__":
     app.run(debug=True)
