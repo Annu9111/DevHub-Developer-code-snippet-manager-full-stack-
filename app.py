@@ -138,5 +138,21 @@ def edit_snippet(id):
 
     return render_template("edit_snippet.html", snippet=snippet)
 
+@app.route("/like/<int:id>")
+def like_snippet(id):
+
+    conn = sqlite3.connect("database/db.sqlite3")
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "UPDATE snippets SET likes = likes + 1 WHERE id=?",
+        (id,)
+    )
+
+    conn.commit()
+    conn.close()
+
+    return redirect("/snippets")
+
 # if __name__ == "__main__":
 #     app.run(debug=True)
