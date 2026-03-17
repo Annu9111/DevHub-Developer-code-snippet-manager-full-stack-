@@ -180,12 +180,12 @@ margin-top:10px;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:calc(100vh - 80px);
+    min-height:100vh;
 }
 .auth-box{
     background:#1e293b;
     padding:30px;
-    border-radius:12px;
+    border-radius:2px solid red;
     width:300px;
     box-shadow:0 0 20px rgba(0,0,0,0.5);
 }

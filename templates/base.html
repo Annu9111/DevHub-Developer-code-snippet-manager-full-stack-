@@ -9,25 +9,30 @@
 </head>
 
 <body>
+
 <nav>
-
 {% if session.get("user") %}
-
-<a href="/">Home</a> | <a href="/snippets">Snippets</a> | <a href="/create">Create</a> | <a href="/dashboard">Dashboard</a> 👤 {{session.get("user")}} | | <a href="/logout">Logout</a>
-
+    <a href="/">Home</a> |
+    <a href="/snippets">Snippets</a> |
+    <a href="/create">Create</a> |
+    <a href="/dashboard">Dashboard</a> 👤 {{session.get("user")}} |
+    <a href="/logout">Logout</a>
 {% else %}
-
-<a href="/">Home</a> | <a href="/login">Login</a> | <a href="/register">Register</a>
-
+    <a href="/">Home</a> |
+    <a href="/login">Login</a> |
+    <a href="/register">Register</a>
 {% endif %}
-
 </nav>
 
 <hr>
-<div class="{% if request.path == '/login' or request.path == '/register' %}auth-page{% else %}container{% endif %}"></div>
+
+<div class="{% if request.path == '/login' or request.path == '/register' %}auth-page{% else %}container{% endif %}">
+    {% block content %}
+    {% endblock %}
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
-
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
