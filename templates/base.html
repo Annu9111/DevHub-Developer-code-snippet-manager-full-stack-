@@ -12,13 +12,13 @@
 
 <nav class="navbar">
 
-<div class="nav-left">
+
     <a href="/">
     <img src="{{ url_for('static', filename='images/profile.png') }}" class="logo">
 </a>
-</div>
 
-<div class="nav-right">  
+
+<div class="nav-link">  
 {% if session.get("user") %}
     <a href="/">Home</a> |
     <a href="/snippets">Snippets</a> |
@@ -33,7 +33,7 @@
 </div>
 </nav>
 
-<hr>
+
 
 <div class="{% if request.path == '/login' or request.path == '/register' %}auth-page{% else %}container{% endif %}">
     {% block content %}
