@@ -10,9 +10,19 @@
 
 <body>
 <nav>
+    <nav>
 
-<a href="/">Home</a> | <a href="/snippets">Snippets</a> | <a href="/create">Create</a> | <a href="/dashboard">Dashboard</a> | <a href="/logout">Logout</a>
+{% if session.get("user") %}
 
+<a href="/">Home</a> | <a href="/snippets">Snippets</a> | <a href="/create">Create</a> | <a href="/dashboard">Dashboard</a>👤 {{session.get("user")}} | | <a href="/logout">Logout</a>
+
+{% else %}
+
+<a href="/">Home</a> | <a href="/login">Login</a> | <a href="/register">Register</a>
+
+{% endif %}
+
+</nav>
 
 
 </nav>
