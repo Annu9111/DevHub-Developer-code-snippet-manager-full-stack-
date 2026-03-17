@@ -2,18 +2,26 @@
 
 {% block content %}
 
-<h2>Create DevHub Account</h2>
+<div class="auth-container">
+
+<div class="auth-card">
+
+<h2>Create Account</h2>
 
 <form method="POST">
 
-<label>Username</label><br> <input type="text" name="username" required><br><br>
+<label>Username</label> <input type="text" name="username" required>
 
-<label>Password</label><br> <input type="password" name="password" required><br><br>
+<label>Password</label> <input type="password" name="password" required>
 
 <button type="submit">Register</button>
 
 </form>
 
-<p>Already have an account? <a href="/login">Login here</a></p>
+<p>Already have an account? <a href="/login">Login</a></p>
+
+</div>
+
+</div>
 
 {% endblock %}
