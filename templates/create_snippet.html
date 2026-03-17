@@ -1,18 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="snippet-box">
 
-<h2>Create Code Snippet</h2>
+    <h2>Create Code Snippet ✨</h2>
 
-<form method="POST">
+    <form method="POST">
 
-<input type="text" name="title" placeholder="Snippet title"><br><br>
+        <input type="text" name="title" placeholder="Snippet Title" required>
 
-<textarea name="code" rows="10" cols="60"
-placeholder="Paste your code here"></textarea><br><br>
+        <textarea name="code" placeholder="Write your code here..." required></textarea>
 
-<button type="submit">Post Snippet</button>
+        <button type="submit">🚀 Post Snippet</button>
 
-</form>
+    </form>
 
+</div>
 {% endblock %}

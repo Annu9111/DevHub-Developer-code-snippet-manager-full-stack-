@@ -239,3 +239,59 @@ margin-top:10px;
     font-size: 14px;
 }
 
+.snippet-box{
+    background: rgba(30, 41, 59, 0.8);
+    padding: 30px;
+    border-radius: 16px;
+    width: 600px;
+    margin: auto;
+    margin-top: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+
+.snippet-box h2{
+    margin-bottom: 20px;
+}
+
+.snippet-box input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #0f172a;
+    color: white;
+}
+
+.snippet-box textarea{
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #020617;
+    color: #38bdf8;
+    font-family: monospace;
+    resize: none;
+}
+
+.snippet-box button{
+    margin-top: 15px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #38bdf8, #0ea5e9);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.snippet-box button:hover{
+    transform: scale(1.05);
+}
+.snippet-box textarea:focus{
+    outline: 2px solid #38bdf8;
+}
+
