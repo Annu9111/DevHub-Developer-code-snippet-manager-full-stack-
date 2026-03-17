@@ -2,18 +2,23 @@
 
 {% block content %}
 <div class="auth-box">
-<h2>Login to DevHub</h2>
 
-<form method="POST">
+    <h2>Welcome Back 👋</h2>
+    <p class="subtitle">Login to continue to DevHub</p>
 
-<label>Username</label><br> <input type="text" name="username" required>
+    <form method="POST">
 
-<label>Password</label><br> <input type="password" name="password" required>
+        <input type="text" name="username" placeholder="Username" required>
 
-<button type="submit">Login</button>
+        <input type="password" name="password" placeholder="Password" required>
 
-</form>
+        <button type="submit">Login</button>
 
-<p>Don't have an account? <a href="/register">Register here</a></p>
+    </form>
+
+    <p class="switch">
+        Don’t have an account? <a href="/register">Register</a>
+    </p>
+
 </div>
 {% endblock %}
