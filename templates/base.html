@@ -19,7 +19,7 @@
 
 
 
-<div class="nav-link">  
+<div class="nav-links">  
 {% if session.get("user") %}
     <a href="/">Home</a> |
     <a href="/snippets">Snippets</a> |
@@ -27,17 +27,16 @@
     <a href="/dashboard">Dashboard</a> 👤 {{session.get("user")}} |
     <a href="/logout">Logout</a>
 {% else %}
-    <a href="/">Home</a> |
-    <a href="/login">Login</a> |
+    <a href="/">Home</a> 
+    <a href="/login">Login</a> 
     <a href="/register">Register</a>
 
     <form action="/snippets" method="GET" class="search-form">
     <input type="text" name="q" placeholder="Search snippets...">
     <button type="submit">🔍</button>
     </form>
-    
-{% endif %}
 
+{% endif %}
 
 </div>
 

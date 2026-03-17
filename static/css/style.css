@@ -354,6 +354,7 @@ button:hover{
     display:flex;
     align-items:center;
     gap:20px;
+    flex-wrap: nowrap;
 }
 
 .nav-links a{
