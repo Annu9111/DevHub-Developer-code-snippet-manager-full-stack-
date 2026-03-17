@@ -10,3 +10,10 @@ function copyCode(button){
     },2000);
 }
 
+setTimeout(() => {
+    const flash = document.querySelector(".flash-message");
+    if(flash){
+        flash.style.display = "none";
+    }
+}, 3000);
+

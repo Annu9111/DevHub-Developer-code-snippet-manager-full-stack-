@@ -33,6 +33,15 @@
 </div>
 </nav>
 
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="flash-container">
+      {% for msg in messages %}
+        <div class="flash-message">{{ msg }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
 
 
 <div class="{% if request.path == '/login' or request.path == '/register' %}auth-page{% else %}container{% endif %}">

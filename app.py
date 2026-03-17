@@ -1,6 +1,6 @@
 from flask import Flask, render_template,request,redirect,session
 import sqlite3
-
+from flask import flash
 app = Flask(__name__)
 app.secret_key = "devhubsecret"
 
@@ -29,7 +29,8 @@ def login():
             session["user"] = username
             return redirect("/dashboard")
         else:
-            return "Invalid login"
+            flash("Invalid username or password ❌")
+            return redirect("/login")
 
     return render_template("login.html")
 
