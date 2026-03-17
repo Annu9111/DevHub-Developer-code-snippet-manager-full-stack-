@@ -17,10 +17,6 @@
     <img src="{{ url_for('static', filename='images/profile.png') }}" class="logo">
 </a>
 
-<form action="/snippets" method="GET" class="search-form">
-    <input type="text" name="q" placeholder="Search snippets...">
-    <button type="submit">🔍</button>
-</form>
 
 
 <div class="nav-link">  
@@ -34,8 +30,17 @@
     <a href="/">Home</a> |
     <a href="/login">Login</a> |
     <a href="/register">Register</a>
+
+    <form action="/snippets" method="GET" class="search-form">
+    <input type="text" name="q" placeholder="Search snippets...">
+    <button type="submit">🔍</button>
+    </form>
+    
 {% endif %}
+
+
 </div>
+
 </nav>
 
 {% with messages = get_flashed_messages() %}
