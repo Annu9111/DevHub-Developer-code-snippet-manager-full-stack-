@@ -6,7 +6,7 @@ app.secret_key = "devhubsecret"
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("index.html",show_footer=True)
 
 @app.route("/login", methods=["GET","POST"])
 def login():
