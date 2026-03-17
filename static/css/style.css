@@ -297,9 +297,9 @@ margin-top:10px;
 
 .footer{
     text-align:center;
-    padding:20px;
-    margin-top:50px;
-    background:#0f172a;
+    padding:25px;
+    margin-top:80px;
+    background:linear-gradient(to right, #0f172a, #020617);
     color:#94a3b8;
     font-size:14px;
     border-top:1px solid #1e293b;
@@ -308,5 +308,34 @@ margin-top:10px;
 .footer span{
     color:#38bdf8;
     font-weight:bold;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 30px;
+    background:#1e293b;
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+    height:45px;
+    border-radius:8px;
+}
+
+.nav-right a{
+    margin-left:15px;
+    text-decoration:none;
+    color:#38bdf8;
+    font-weight:bold;
+}
+
+.nav-right a:hover{
+    color:white;
 }
 

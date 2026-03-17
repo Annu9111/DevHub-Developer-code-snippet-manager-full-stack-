@@ -10,7 +10,13 @@
 
 <body>
 
-<nav>
+<nav class="navbar">
+
+<div class="nav-left">
+    <img src="{{ url_for('static', filename='images/profile.png') }}" class="logo">
+</div>
+
+<div class="nav-right">  
 {% if session.get("user") %}
     <a href="/">Home</a> |
     <a href="/snippets">Snippets</a> |
@@ -22,6 +28,7 @@
     <a href="/login">Login</a> |
     <a href="/register">Register</a>
 {% endif %}
+</div>
 </nav>
 
 <hr>
