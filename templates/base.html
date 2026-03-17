@@ -10,11 +10,10 @@
 
 <body>
 <nav>
-    <nav>
 
 {% if session.get("user") %}
 
-<a href="/">Home</a> | <a href="/snippets">Snippets</a> | <a href="/create">Create</a> | <a href="/dashboard">Dashboard</a>👤 {{session.get("user")}} | | <a href="/logout">Logout</a>
+<a href="/">Home</a> | <a href="/snippets">Snippets</a> | <a href="/create">Create</a> | <a href="/dashboard">Dashboard</a> 👤 {{session.get("user")}} | | <a href="/logout">Logout</a>
 
 {% else %}
 
@@ -24,13 +23,14 @@
 
 </nav>
 
-
-</nav>
 <hr>
-<div class="container">
-{% block content %}
-{% endblock %}
-</div>
+{% if request.path == "/login" or request.path == "/register" %}
+    {% block content %}{% endblock %}
+{% else %}
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+{% endif %}
 <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
 
