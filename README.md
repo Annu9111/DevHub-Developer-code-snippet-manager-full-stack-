@@ -4,7 +4,7 @@ DevHub is a full-stack web application where developers can create, share, and e
 It includes authentication, search functionality, and a clean UI for a smooth developer experience.
 
 🌐 **Live Demo:** https://devhub-4069.onrender.com  
-📂 **GitHub Repo:** https://github.com/Annu911/DevHub-Developer-code-snippet-manager-full-stack
+📂 **GitHub Repo:** https://github.com/Annu911/DevHub-Developer-code-snippet-manager-full-stack-
 
 ---
 
