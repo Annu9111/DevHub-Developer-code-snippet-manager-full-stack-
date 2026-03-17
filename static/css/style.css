@@ -392,3 +392,25 @@ button:hover{
         transform:translateY(0);
     }
 }
+
+.search-form{
+    margin-left:20px;
+    display:flex;
+    align-items:center;
+}
+
+.search-form input{
+    padding:6px 10px;
+    border-radius:6px 0 0 6px;
+    border:none;
+    outline:none;
+}
+
+.search-form button{
+    padding:6px 10px;
+    border:none;
+    background:#38bdf8;
+    color:white;
+    border-radius:0 6px 6px 0;
+    cursor:pointer;
+}

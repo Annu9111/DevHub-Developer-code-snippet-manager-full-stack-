@@ -90,12 +90,20 @@ def create_snippet():
 @app.route("/snippets")
 def view_snippets():
 
+    query = request.args.get("q")
+
     conn = sqlite3.connect("database/db.sqlite3")
     cursor = conn.cursor()
 
-    cursor.execute("SELECT * FROM snippets")
-    snippets = cursor.fetchall()
+    if query:
+        cursor.execute(
+            "SELECT * FROM snippets WHERE title LIKE ? OR code LIKE ?",
+            ('%' + query + '%', '%' + query + '%')
+        )
+    else:
+        cursor.execute("SELECT * FROM snippets")
 
+    snippets = cursor.fetchall()
     conn.close()
 
     return render_template("view_snippet.html", snippets=snippets)

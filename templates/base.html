@@ -17,6 +17,11 @@
     <img src="{{ url_for('static', filename='images/profile.png') }}" class="logo">
 </a>
 
+<form action="/snippets" method="GET" class="search-form">
+    <input type="text" name="q" placeholder="Search snippets...">
+    <button type="submit">🔍</button>
+</form>
+
 
 <div class="nav-link">  
 {% if session.get("user") %}
