@@ -180,5 +180,29 @@ margin-top:10px;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:100vh;
+    min-height:calc(100vh - 80px);
+}
+.auth-box{
+    background:#1e293b;
+    padding:30px;
+    border-radius:12px;
+    width:300px;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.auth-box input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:none;
+    border-radius:6px;
+}
+
+.auth-box button{
+    width:100%;
+    padding:10px;
+    background:#38bdf8;
+    border:none;
+    border-radius:6px;
+    font-weight:bold;
 }

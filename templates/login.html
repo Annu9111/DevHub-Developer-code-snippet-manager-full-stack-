@@ -1,19 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class="auth-box">
 <h2>Login to DevHub</h2>
 
 <form method="POST">
 
-<label>Username</label><br> <input type="text" name="username" required><br><br>
+<label>Username</label><br> <input type="text" name="username" required>
 
-<label>Password</label><br> <input type="password" name="password" required><br><br>
+<label>Password</label><br> <input type="password" name="password" required>
 
 <button type="submit">Login</button>
 
 </form>
 
 <p>Don't have an account? <a href="/register">Register here</a></p>
-
+</div>
 {% endblock %}

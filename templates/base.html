@@ -24,15 +24,7 @@
 </nav>
 
 <hr>
-{% if request.path == "/login" or request.path == "/register" %}
-    <div class="auth-page">
-        {% block content %}{% endblock %}
-    </div>
-{% else %}
-    <div class="container">
-        {% block content %}{% endblock %}
-    </div>
-{% endif %}
+<div class="{% if request.path == '/login' or request.path == '/register' %}auth-page{% else %}container{% endif %}"></div>
 <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
 
